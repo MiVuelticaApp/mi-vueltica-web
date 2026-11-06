@@ -1,0 +1,142 @@
+/*
+  Mi vueltica — tokens base
+  Fuente: Figma "MiVueltica — App Design (Copy)".
+  ✅ Valores confirmados desde el componente Badge (nodo 5:187): categorías, audiencias, precio y estados.
+  ⚠️ Pendiente (TODO): fondo, texto principal, bordes, radios, sombras, escala tipográfica y espaciado.
+     Se sacan de otros frames (Map Base, Icons, Shared components) o de las variables, cuando se seleccione un layer en Figma.
+*/
+
+:root {
+  /* Tipografía */
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;   /* confirmada en badges */
+  --font-display: "Atkinson Hyperlegible", system-ui, sans-serif; /* TODO: confirmar si títulos usan otra */
+  --font-weight-bold: 700;
+  --text-badge: 0.8125rem;   /* 13px, label de badges */
+  --leading-badge: 1rem;     /* 16px */
+  --tracking-badge: 0.13px;
+
+  /* Audiencia / categoría (confirmados) */
+  --color-free: #0b6b3a;               /* Gratis, Verificado, Lugar */
+  --color-free-container: #d9efe2;
+  --color-student: #5a2d91;            /* Estudiantes */
+  --color-student-container: #ede3f8;
+  --color-senior: #6e4a00;             /* Ciudadanos de oro */
+  --color-senior-container: #fff4cc;
+  --color-place: #0b6b3a;              /* Lugar */
+  --color-place-container: #d9efe2;
+  --color-event: #b8321a;              /* Evento */
+  --color-event-container: #fadfd8;
+
+  /* Estado (confirmados) */
+  --color-stale: #6e4a00;              /* ¿Sigue igual? Verificar */
+  --color-stale-container: #fff4cc;
+
+  /* Precio (confirmados) */
+  --color-price-container: #e6e9ee;
+  --color-price-on-container: #0b1220;
+
+  /* Neutros (confirmados parcialmente) */
+  --color-on-surface-variant: #3e4857; /* Familias, texto secundario */
+  --color-surface-variant: #f1f3f6;    /* Familias, superficies suaves */
+
+  /* Neutros (TODO Figma) */
+  --color-bg: #ffffff;
+  --color-text: #0b1220;               /* TODO: validar con el texto principal del Figma */
+  --color-border: #e0e0e0;             /* TODO */
+
+  /* Escala tipográfica (TODO: tomar de Shared components / Map Base) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 3.5rem;
+  --leading-tight: 1.1;
+  --leading-body: 1.6;
+
+  /* Espaciado (TODO: validar; escala de 4px observada en los frames) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Forma (los badges usan radio de 2px; el resto TODO) */
+  --radius-badge: 2px;
+  --radius-sm: 4px;
+  --radius-md: 12px;   /* TODO */
+  --radius-lg: 24px;   /* TODO */
+  --radius-pill: 999px;
+
+  /* Sombras (TODO) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --container-max: 1120px;
+  --gutter: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--space-8);
+  }
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-4);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Badge base (referencia del componente Figma 5:187) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px 4px 8px;
+  border-radius: var(--radius-badge);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-badge);
+  line-height: var(--leading-badge);
+  letter-spacing: var(--tracking-badge);
+  white-space: nowrap;
+}
+
+.badge--free     { background: var(--color-free-container);     color: var(--color-free); }
+.badge--student  { background: var(--color-student-container);  color: var(--color-student); }
+.badge--senior   { background: var(--color-senior-container);   color: var(--color-senior); }
+.badge--place    { background: var(--color-place-container);    color: var(--color-place); }
+.badge--event    { background: var(--color-event-container);    color: var(--color-event); }
+.badge--family   { background: var(--color-surface-variant);    color: var(--color-on-surface-variant); }
+.badge--price    { background: var(--color-price-container);    color: var(--color-price-on-container); }
+.badge--verified { background: var(--color-free-container);     color: var(--color-free); }
+.badge--stale    { background: var(--color-stale-container);    color: var(--color-stale); }
