@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi VuelTica · Salir sin gastar sí se puede</title>
+  <meta name="description" content="Mi VuelTica reúne espacios y actividades gratuitas de todo Costa Rica para tu próxima vueltica. Planes personalizados, sin pensar en la billetera.">
+  <meta name="theme-color" content="#0b2f7a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mi VuelTica · Salir sin gastar sí se puede">
+  <meta property="og:description" content="Reunimos espacios y actividades gratuitas de todo el país para tu próxima vueltica.">
+  <meta property="og:image" content="/img/logo-square.png">
+  <meta property="og:locale" content="es_CR">
+
+  <link rel="icon" type="image/png" href="/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/img/app-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Mi VuelTica, inicio">
+        <img src="/img/logo-full.png" alt="Mi VuelTica" width="444" height="195">
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#que-es">Qué es</a>
+        <a href="#planes">Planes</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#como-funciona">Cómo funciona</a>
+      </nav>
+      <a class="btn btn--red nav__cta" href="#descargar">Descargar</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Planes gratis en todo Costa Rica</p>
+          <h1 class="hero__title">
+            Salir sin gastar
+            <span class="hero__title-accent">sí se puede.</span>
+          </h1>
+          <p class="hero__lead">
+            Reunimos espacios y actividades gratuitas de todo el país para tu próxima vueltica.
+            Armá tus planes sin pensar en la billetera.
+          </p>
+          <div class="stores" data-stores>
+            <a class="store" data-store="appStore" href="#descargar">
+              <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.47-.03-.01-2.3-.88-2.32-3.5ZM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21Z"/></svg>
+              <span class="store__text"><small>Descargala en el</small>App Store</span>
+            </a>
+            <a class="store" data-store="googlePlay" href="#descargar">
+              <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l.1.1 9.7-9.7v-.2L3.7 2.2l-.1.1Zm12.9 13-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2-.1-.1Zm.1.1-3.3-3.3-9.7 9.7c.4.4 1 .4 1.6.1l11.4-6.5M16.6 8.6 5.2 2.1c-.7-.4-1.3-.3-1.6.1l9.7 9.7 3.3-3.3Z"/></svg>
+              <span class="store__text"><small>Disponible en</small>Google Play</span>
+            </a>
+          </div>
+          <p class="hero__note" data-stores-note hidden>Muy pronto en las tiendas. Seguinos para enterarte primero.</p>
+        </div>
+
+        <!-- Mockup de la app -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__screen">
+              <div class="phone__status"><span>9:41</span><span class="phone__dots"></span></div>
+              <div class="phone__head">
+                <small>Hoy cerca de vos</small>
+                <strong>Tu próxima vueltica</strong>
+              </div>
+              <div class="phone__chips">
+                <span class="badge badge--free">Gratis</span>
+                <span class="badge badge--family">Familias</span>
+                <span class="badge badge--student">Estudiantes</span>
+              </div>
+              <div class="phone__map">
+                <svg viewBox="0 0 260 120" preserveAspectRatio="xMidYMid slice">
+                  <rect width="260" height="120" fill="#e9eef7"/>
+                  <path d="M-10 90 C 60 70, 90 110, 150 70 S 240 30, 280 50" stroke="#fff" stroke-width="12" fill="none"/>
+                  <path d="M-10 90 C 60 70, 90 110, 150 70 S 240 30, 280 50" stroke="#0b2f7a" stroke-width="1.6" stroke-dasharray="6 5" fill="none"/>
+                  <path d="M70 -10 L 110 130" stroke="#fff" stroke-width="8"/>
+                  <path d="M190 -10 L 170 130" stroke="#fff" stroke-width="6"/>
+                  <circle cx="60" cy="40" r="16" fill="#d9efe2"/>
+                  <circle cx="215" cy="95" r="12" fill="#d9efe2"/>
+                </svg>
+                <span class="pin pin--green" style="left:22%;top:52%"></span>
+                <span class="pin pin--red" style="left:56%;top:30%"></span>
+                <span class="pin pin--purple" style="left:78%;top:62%"></span>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card__thumb mini-card__thumb--event"></div>
+                <div>
+                  <strong>Concierto en el parque</strong>
+                  <small>Sábado · 4:00 p.m.</small>
+                  <div class="mini-card__badges">
+                    <span class="badge badge--event">Evento</span>
+                    <span class="badge badge--free">Gratis</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card__thumb mini-card__thumb--place"></div>
+                <div>
+                  <strong>Sendero urbano</strong>
+                  <small>Abierto todos los días</small>
+                  <div class="mini-card__badges">
+                    <span class="badge badge--place">Lugar</span>
+                    <span class="badge badge--verified">Verificado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-tag float-tag--a"><span class="badge badge--free">Gratis</span> 100% de los planes</div>
+          <div class="float-tag float-tag--b"><span class="badge badge--senior">Ciudadanos de oro</span></div>
+        </div>
+      </div>
+
+      <div class="road road--hero" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="ticker" aria-label="Tipos de planes">
+      <div class="ticker__track">
+        <ul>
+          <li>Museos</li><li>Parques</li><li>Conciertos</li><li>Ferias</li><li>Senderos</li>
+          <li>Talleres</li><li>Cine al aire libre</li><li>Festivales</li><li>Exposiciones</li><li>Deporte</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Museos</li><li>Parques</li><li>Conciertos</li><li>Ferias</li><li>Senderos</li>
+          <li>Talleres</li><li>Cine al aire libre</li><li>Festivales</li><li>Exposiciones</li><li>Deporte</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ ES ============ -->
+    <section class="section" id="que-es">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Lo que trae la app</p>
+          <h2 class="section__title">Todo lo que necesitás para tu próxima vueltica, <em>en un solo lugar.</em></h2>
+          <p class="section__lead">Aquí vas a encontrar planes gratuitos que muchas veces no conocemos. La app hace el trabajo de buscar; vos solo elegís a dónde ir.</p>
+        </div>
+
+        <div class="features">
+          <article class="feature feature--big reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+            </div>
+            <h3>Un mapa lleno de planes gratis</h3>
+            <p>Mirá qué hay cerca de vos o en cualquier rincón del país. Lugares que siempre están abiertos y eventos con fecha, todo en el mismo mapa.</p>
+            <div class="feature__badges">
+              <span class="badge badge--place">Lugar</span>
+              <span class="badge badge--event">Evento</span>
+            </div>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg>
+            </div>
+            <h3>Planes 100% personalizados</h3>
+            <p>Contanos qué te gusta y te armamos recomendaciones a tu medida.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+            </div>
+            <h3>Filtros para tu grupo</h3>
+            <p>Estudiantes, familias, ciudadanos de oro: encontrá lo que es para vos.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+            </div>
+            <h3>Información verificada</h3>
+            <p>Cada plan muestra si está verificado. Si algo cambió, la comunidad avisa.</p>
+            <div class="feature__badges">
+              <span class="badge badge--verified">Verificado</span>
+              <span class="badge badge--stale">¿Sigue igual?</span>
+            </div>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.5-2.5 1.8-2.5.8-2.5 1.9 1 1.8 2.5 1.8 2.5-.7 2.5-1.7"/><path d="M5 19 19 5"/></svg>
+            </div>
+            <h3>Cero sorpresas en la billetera</h3>
+            <p>Si algo tiene un costo extra, te lo decimos claro desde el inicio.</p>
+            <div class="feature__badges">
+              <span class="badge badge--free">Gratis</span>
+              <span class="badge badge--price">Precio</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="section section--cream" id="planes">
+      <div class="road road--thin" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">El catálogo</p>
+            <h2 class="section__title">Así se ve una vueltica <em>en la app.</em></h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar planes por público">
+            <button class="chip is-active" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="chip" data-filter="student" aria-pressed="false">Estudiantes</button>
+            <button class="chip" data-filter="family" aria-pressed="false">Familias</button>
+            <button class="chip" data-filter="senior" aria-pressed="false">Ciudadanos de oro</button>
+          </div>
+        </div>
+
+        <div class="plans" data-plans>
+          <article class="plan reveal" data-aud="family student senior">
+            <div class="plan__art plan__art--museum">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 26 32 12l24 14M12 26v24M22 26v24M32 26v24M42 26v24M52 26v24M6 52h52"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--place">Lugar</span><span class="badge badge--free">Gratis</span></div>
+              <h3>Museos de puertas abiertas</h3>
+              <p>Colecciones de arte, historia y ciencia con entrada libre en días específicos.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>San José</p>
+            </div>
+          </article>
+
+          <article class="plan reveal" data-aud="family student">
+            <div class="plan__art plan__art--music">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 46V16l26-6v30"/><circle cx="18" cy="46" r="6"/><circle cx="44" cy="40" r="6"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--event">Evento</span><span class="badge badge--free">Gratis</span></div>
+              <h3>Conciertos al aire libre</h3>
+              <p>Música en parques y plazas los fines de semana. Llevá la manta y listo.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Heredia</p>
+            </div>
+          </article>
+
+          <article class="plan reveal" data-aud="family senior">
+            <div class="plan__art plan__art--trail">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 50 22 24l10 14 8-10 18 22Z"/><circle cx="46" cy="16" r="5"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--place">Lugar</span><span class="badge badge--verified">Verificado</span></div>
+              <h3>Senderos y parques urbanos</h3>
+              <p>Naturaleza a pocos minutos de la ciudad, ideal para caminar en familia.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Cartago</p>
+            </div>
+          </article>
+
+          <article class="plan reveal" data-aud="student">
+            <div class="plan__art plan__art--workshop">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50 40 24M36 14l14 14-6 6-14-14ZM12 52l4-10 6 6Z"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--event">Evento</span><span class="badge badge--student">Estudiantes</span></div>
+              <h3>Talleres y charlas</h3>
+              <p>Aprendé algo nuevo: arte, tecnología, idiomas y más, sin pagar un colón.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Alajuela</p>
+            </div>
+          </article>
+
+          <article class="plan reveal" data-aud="family student senior">
+            <div class="plan__art plan__art--fair">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 24h48L50 12H14ZM8 24c0 4 3 6 6 6s6-2 6-6c0 4 3 6 6 6s6-2 6-6c0 4 3 6 6 6s6-2 6-6c0 4 3 6 6 6s6-2 6-6M12 30v22h40V30"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--event">Evento</span><span class="badge badge--family">Familias</span></div>
+              <h3>Ferias y festivales</h3>
+              <p>Cultura, comida y tradición en las calles de tu cantón. Entrar no cuesta nada.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Guanacaste</p>
+            </div>
+          </article>
+
+          <article class="plan reveal" data-aud="senior family">
+            <div class="plan__art plan__art--cinema">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="16" width="48" height="32" rx="3"/><path d="m28 26 10 6-10 6Z"/></svg>
+            </div>
+            <div class="plan__body">
+              <div class="plan__badges"><span class="badge badge--event">Evento</span><span class="badge badge--senior">Ciudadanos de oro</span></div>
+              <h3>Cine y teatro comunitario</h3>
+              <p>Funciones gratuitas en centros culturales y plazas de todo el país.</p>
+              <p class="plan__meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Puntarenas</p>
+            </div>
+          </article>
+        </div>
+        <p class="plans__empty" data-plans-empty hidden>No hay planes de ejemplo para este filtro. En la app vas a encontrar muchos más.</p>
+        <p class="plans__foot reveal">Estos son ejemplos. En la app encontrás horarios, ubicación exacta y cómo llegar.</p>
+      </div>
+    </section>
+
+    <!-- ============ PARA QUIÉN ============ -->
+    <section class="section" id="para-quien">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Para quién</p>
+          <h2 class="section__title">Hay una vueltica <em>para cada quien.</em></h2>
+        </div>
+        <div class="audiences">
+          <article class="aud aud--student reveal">
+            <span class="aud__num">01</span>
+            <h3>Estudiantes</h3>
+            <p>Planes para después de clases o para el finde, sin que el presupuesto sea problema.</p>
+          </article>
+          <article class="aud aud--family reveal">
+            <span class="aud__num">02</span>
+            <h3>Familias</h3>
+            <p>Actividades para grandes y chiquitos, pensadas para salir todos juntos.</p>
+          </article>
+          <article class="aud aud--senior reveal">
+            <span class="aud__num">03</span>
+            <h3>Ciudadanos de oro</h3>
+            <p>Cultura, naturaleza y comunidad, con beneficios y espacios pensados para vos.</p>
+          </article>
+          <article class="aud aud--all reveal">
+            <span class="aud__num">04</span>
+            <h3>Y para todo el mundo</h3>
+            <p>Si te gusta salir y conocer tu país, Mi VuelTica es para vos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section section--blue" id="como-funciona">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow eyebrow--light">Cómo funciona</p>
+          <h2 class="section__title">Tres pasos y <em>ya vas en camino.</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__marker">1</span>
+            <h3>Descargá la app</h3>
+            <p>Gratis, como todo lo que vas a encontrar adentro.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__marker">2</span>
+            <h3>Elegí tu plan</h3>
+            <p>Filtrá por zona, fecha o público y guardá tus favoritos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__marker">3</span>
+            <h3>Salí sin gastar</h3>
+            <p>Llegá, disfrutá y contale a la comunidad cómo te fue.</p>
+          </li>
+        </ol>
+      </div>
+      <div class="road road--steps" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ COMUNIDAD ============ -->
+    <section class="section" id="comunidad">
+      <div class="container community reveal">
+        <div>
+          <p class="eyebrow">Hecha con la comunidad</p>
+          <h2 class="section__title">¿Conocés una actividad gratuita que <em>deberíamos incluir?</em></h2>
+          <p class="section__lead">Muchos de los mejores planes nos llegan de ustedes. Escribinos en Instagram y ayudanos a que más gente salga sin gastar.</p>
+        </div>
+        <a class="btn btn--blue btn--lg" href="https://www.instagram.com/mi_vueltica/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @mi_vueltica
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ DESCARGAR ============ -->
+    <section class="cta" id="descargar">
+      <div class="road road--cta" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <img class="cta__icon reveal" src="/img/app-icon.png" alt="" width="240" height="240" loading="lazy">
+        <h2 class="cta__title reveal">Tu próxima vueltica<br>empieza aquí.</h2>
+        <p class="cta__lead reveal">Descargá Mi VuelTica y armá tus planes sin pensar en la billetera.</p>
+        <div class="stores stores--center reveal" data-stores>
+          <a class="store" data-store="appStore" href="#descargar">
+            <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.47-.03-.01-2.3-.88-2.32-3.5ZM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21Z"/></svg>
+            <span class="store__text"><small>Descargala en el</small>App Store</span>
+          </a>
+          <a class="store" data-store="googlePlay" href="#descargar">
+            <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l.1.1 9.7-9.7v-.2L3.7 2.2l-.1.1Zm12.9 13-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.2c1.1.6 1.1 1.6 0 2.2l-3.8 2.2-.1-.1Zm.1.1-3.3-3.3-9.7 9.7c.4.4 1 .4 1.6.1l11.4-6.5M16.6 8.6 5.2 2.1c-.7-.4-1.3-.3-1.6.1l9.7 9.7 3.3-3.3Z"/></svg>
+            <span class="store__text"><small>Disponible en</small>Google Play</span>
+          </a>
+        </div>
+        <p class="hero__note" data-stores-note hidden>Muy pronto en las tiendas. Seguinos en Instagram para enterarte primero.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img class="footer__logo" src="/img/logo-full.png" alt="Mi VuelTica" width="444" height="195" loading="lazy">
+      <p class="footer__tag">Salir sin gastar sí se puede.</p>
+      <nav class="footer__links" aria-label="Pie de página">
+        <a href="#que-es">Qué es</a>
+        <a href="#planes">Planes</a>
+        <a href="#descargar">Descargar</a>
+        <a href="https://www.instagram.com/mi_vueltica/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer__copy">© <span data-year>2026</span> Mi VuelTica · Hecho en Costa Rica</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

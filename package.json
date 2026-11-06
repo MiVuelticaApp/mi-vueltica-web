@@ -1,0 +1,14 @@
+{
+  "name": "mivueltica-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de Mi VuelTica: catálogo de la app de planes gratuitos en Costa Rica.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

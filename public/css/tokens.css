@@ -15,6 +15,13 @@
   --leading-badge: 1rem;     /* 16px */
   --tracking-badge: 0.13px;
 
+  /* Marca (confirmados desde el logo) */
+  --color-brand: #0b2f7a;              /* Azul del logo */
+  --color-brand-deep: #071f55;         /* Azul profundo para fondos y sombras */
+  --color-brand-red: #c8102e;          /* Rojo "Tica" */
+  --color-on-brand: #ffffff;
+  --color-cream: #f7f4ee;              /* Superficie cálida para secciones alternas */
+
   /* Audiencia / categoría (confirmados) */
   --color-free: #0b6b3a;               /* Gratis, Verificado, Lugar */
   --color-free-container: #d9efe2;
