@@ -29,6 +29,26 @@ $env:PORT=8080; npm start
 
 Para detener el servidor: `Ctrl + C`.
 
+## Correr con Docker
+
+Con Docker Compose (recomendado):
+
+```bash
+docker compose up -d --build   # construye la imagen y levanta el contenedor
+docker compose logs -f         # ver logs
+docker compose down            # detener
+```
+
+Abrí <http://localhost:3000>. Para usar otro puerto en tu máquina: `PORT=8080 docker compose up -d --build`
+(en PowerShell: `$env:PORT=8080; docker compose up -d --build`).
+
+Solo con Docker:
+
+```bash
+docker build -t mivueltica-web .
+docker run -d -p 3000:3000 --name mivueltica-web mivueltica-web
+```
+
 ## Estructura
 
 ```
@@ -76,7 +96,7 @@ Usá siempre las variables de [`public/css/tokens.css`](public/css/tokens.css). 
 
 1. Subí los cambios a GitHub (`git push`).
 2. En [Railway](https://railway.com): **New Project → Deploy from GitHub repo** y elegí este repositorio.
-3. Railway detecta Node y usa `npm start`. El puerto se toma de la variable `PORT` que Railway asigna automáticamente.
+3. Railway detecta el `Dockerfile` y construye la imagen con él. El puerto se toma de la variable `PORT` que Railway asigna automáticamente.
 4. En **Settings → Networking → Generate Domain** generás la URL pública, o conectás un dominio propio.
 
 Cada `push` a la rama principal vuelve a desplegar el sitio automáticamente.
