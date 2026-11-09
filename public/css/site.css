@@ -737,3 +737,47 @@ svg { flex-shrink: 0; }
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Redes sociales ---------- */
+
+.hero__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.hero__social-label {
+  font-size: var(--text-sm);
+  opacity: .7;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.social-link:hover {
+  background: rgba(255, 255, 255, .28);
+  transform: translateY(-2px);
+}
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.community__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
