@@ -718,7 +718,8 @@ svg { flex-shrink: 0; }
 }
 .footer__logo { height: 96px; width: auto; }
 .footer__tag { margin: 0; font-weight: 700; font-size: var(--text-lg); }
-.footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-6); }
+.footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-8); }
+.footer__link-group { display: flex; align-items: center; gap: var(--space-6); }
 .footer__links a { text-decoration: none; opacity: .85; }
 .footer__links a:hover { opacity: 1; text-decoration: underline; }
 .footer__copy { margin: var(--space-4) 0 0; font-size: var(--text-sm); opacity: .7; }
