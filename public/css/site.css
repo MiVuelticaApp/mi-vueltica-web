@@ -778,6 +778,7 @@ svg { flex-shrink: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+  justify-content: center;
 }
 
 .section__lead + .section__lead {
@@ -789,6 +790,9 @@ svg { flex-shrink: 0; }
   user-select: none;
 }
 
+.community__actions .btn:not(.community__email-btn) {
+  flex: 1;
+}
 .community__email-btn {
   flex-basis: 100%;
 }
