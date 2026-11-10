@@ -61,7 +61,7 @@ svg { flex-shrink: 0; }
   font-size: clamp(2rem, 4.4vw, var(--text-2xl));
   letter-spacing: -0.02em;
   color: var(--color-brand);
-  max-width: 24ch;
+  max-width: 30ch;
 }
 .section__title em {
   font-style: normal;
@@ -231,7 +231,7 @@ svg { flex-shrink: 0; }
 }
 .hero__lead {
   font-size: var(--text-lg);
-  max-width: 44ch;
+  max-width: 52ch;
   margin: 0 0 var(--space-8);
   opacity: .92;
 }
@@ -780,4 +780,25 @@ svg { flex-shrink: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+
+.section__lead + .section__lead {
+  margin-top: var(--space-3);
+}
+
+.footer__sep {
+  opacity: .3;
+  user-select: none;
+}
+
+.community__email {
+  width: 100%;
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-sm);
+  opacity: .75;
+  text-align: center;
+}
+.community__email a {
+  color: var(--color-brand);
+  text-underline-offset: 2px;
 }
