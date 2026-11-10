@@ -61,7 +61,6 @@ svg { flex-shrink: 0; }
   font-size: clamp(2rem, 4.4vw, var(--text-2xl));
   letter-spacing: -0.02em;
   color: var(--color-brand);
-  max-width: 30ch;
 }
 .section__title em {
   font-style: normal;
@@ -70,7 +69,7 @@ svg { flex-shrink: 0; }
 .section__lead {
   font-size: var(--text-lg);
   color: var(--color-on-surface-variant);
-  max-width: 56ch;
+  max-width: 72ch;
   margin: 0;
 }
 
@@ -231,7 +230,7 @@ svg { flex-shrink: 0; }
 }
 .hero__lead {
   font-size: var(--text-lg);
-  max-width: 52ch;
+  max-width: 100%;
   margin: 0 0 var(--space-8);
   opacity: .92;
 }
@@ -668,7 +667,6 @@ svg { flex-shrink: 0; }
   gap: var(--space-8);
   align-items: center;
 }
-.community .section__title { max-width: 22ch; }
 @media (min-width: 900px) {
   .community { grid-template-columns: 1fr auto; gap: var(--space-16); }
 }
@@ -791,14 +789,6 @@ svg { flex-shrink: 0; }
   user-select: none;
 }
 
-.community__email {
-  width: 100%;
-  margin: var(--space-1) 0 0;
-  font-size: var(--text-sm);
-  opacity: .75;
-  text-align: center;
-}
-.community__email a {
-  color: var(--color-brand);
-  text-underline-offset: 2px;
+.community__email-btn {
+  flex-basis: 100%;
 }
