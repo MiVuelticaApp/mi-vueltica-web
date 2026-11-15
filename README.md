@@ -1,23 +1,38 @@
-# Mi VuelTica — sitio web
+# MiVueltica · Website
 
-Página catálogo de la app **Mi VuelTica**: planes y actividades gratuitas en todo Costa Rica.
-La app tiene todas las funciones; esta web las presenta y lleva a las tiendas de aplicaciones.
+Marketing website for MiVueltica: a catalog of free plans and activities all over Costa Rica that presents the app and links to the app stores.
 
-## Requisitos
+| Repository | What it is |
+|---|---|
+| [mi-vueltica-app](https://github.com/MiVuelticaApp/mi-vueltica-app) | Mobile app (iOS, Android and web) |
+| [mi-vueltica-api](https://github.com/MiVuelticaApp/mi-vueltica-api) | REST API and MCP server |
+| **mi-vueltica-web** | Marketing website |
+| [mi-vueltica-crawler](https://github.com/MiVuelticaApp/mi-vueltica-crawler) | Event crawler (private) |
 
-- [Node.js](https://nodejs.org/) 18 o superior
+## Features
 
-No hay dependencias que instalar. No hace falta correr `npm install`.
+- Single page that presents the app and its sample plans, filtered by audience (students, families, seniors).
+- App Store and Google Play buttons, shown as "Muy pronto en" until the store links are set.
+- Social links (Instagram and TikTok) and a contact email.
 
-## Correr en local
+## Tech stack
+
+- Static HTML, CSS and JavaScript (no framework, no build step)
+- Node.js static server with no dependencies (`server.js`)
+- Docker and Railway for deployment
+
+## Requirements
+
+- Node.js 18 or later
+- No `npm install` needed: there are no dependencies
+
+## Getting started
 
 ```bash
 npm start
 ```
 
-Abrí <http://localhost:3000>.
-
-Para usar otro puerto:
+Open <http://localhost:3000>. To use another port:
 
 ```bash
 # macOS / Linux / Git Bash
@@ -27,80 +42,57 @@ PORT=8080 npm start
 $env:PORT=8080; npm start
 ```
 
-Para detener el servidor: `Ctrl + C`.
+## Commands
 
-## Correr con Docker
+| Command | What it does |
+|---|---|
+| `npm start` | Static server on port 3000 (or `PORT`) |
+| `docker compose up -d --build` | Build the image and start the container |
+| `docker compose logs -f` | Follow the logs |
+| `docker compose down` | Stop the container |
 
-Con Docker Compose (recomendado):
+## Configuration
 
-```bash
-docker compose up -d --build   # construye la imagen y levanta el contenedor
-docker compose logs -f         # ver logs
-docker compose down            # detener
+| Setting | Where |
+|---|---|
+| `PORT` | Environment variable, default 3000 (Railway sets it) |
+| App Store / Google Play links | `STORE_LINKS` in [`public/js/main.js`](public/js/main.js) |
+| Texts and catalog plans | [`public/index.html`](public/index.html): each plan is an `<article class="plan">`, and `data-aud` (`student`, `family`, `senior`) sets the filters it appears in |
+| Colors and spacing | Variables in [`public/css/tokens.css`](public/css/tokens.css) |
+
+Brand rules for the site: no emojis, blue `#0b2f7a`, red `#c8102e` and white, and Costa Rican "voseo" in the copy ("descargá", "armá", "vos").
+
+## Project structure
+
+```
+├── public/              # Everything served on the web
+│   ├── index.html       # Single page
+│   ├── css/
+│   │   ├── tokens.css   # Design tokens (colors, typography, spacing)
+│   │   └── site.css     # Site styles
+│   ├── js/main.js       # Store links, filters and animations
+│   └── img/             # Logos
+├── server.js            # Static server (no dependencies)
+├── package.json
+└── railway.json         # Deployment settings
 ```
 
-Abrí <http://localhost:3000>. Para usar otro puerto en tu máquina: `PORT=8080 docker compose up -d --build`
-(en PowerShell: `$env:PORT=8080; docker compose up -d --build`).
+## Deployment
 
-Solo con Docker:
+Railway builds the `Dockerfile` and redeploys on every push to `main`:
+
+1. In [Railway](https://railway.com): **New Project → Deploy from GitHub repo** and pick this repository.
+2. Railway assigns `PORT` automatically.
+3. In **Settings → Networking → Generate Domain**, create the public URL or connect a custom domain.
+
+Without Railway:
 
 ```bash
 docker build -t mivueltica-web .
 docker run -d -p 3000:3000 --name mivueltica-web mivueltica-web
 ```
 
-## Estructura
+## Documentation
 
-```
-├── public/              # Todo lo que se sirve en la web
-│   ├── index.html       # Página única
-│   ├── css/
-│   │   ├── tokens.css   # Tokens de diseño (colores, tipografía, espaciado)
-│   │   └── site.css     # Estilos del sitio
-│   ├── js/main.js       # Links de tiendas, filtros y animaciones
-│   └── img/             # Logos
-├── server.js            # Servidor estático (sin dependencias)
-├── package.json
-└── railway.json         # Configuración de deploy
-```
-
-## Cambios frecuentes
-
-### Activar los links de las tiendas
-
-En [`public/js/main.js`](public/js/main.js), pegá los links en `STORE_LINKS`:
-
-```js
-const STORE_LINKS = {
-  appStore: 'https://apps.apple.com/...',
-  googlePlay: 'https://play.google.com/store/apps/details?id=...',
-};
-```
-
-Mientras un link esté vacío, su botón dice "Muy pronto en" y la página muestra un aviso para seguirnos en Instagram.
-
-### Editar textos o planes del catálogo
-
-Todo el contenido está en [`public/index.html`](public/index.html). Cada plan es un `<article class="plan">`.
-El atributo `data-aud` define en qué filtros aparece: `student`, `family` y/o `senior`.
-
-### Colores y estilos
-
-Usá siempre las variables de [`public/css/tokens.css`](public/css/tokens.css). Reglas de la marca:
-
-- Sin emojis en la web.
-- Azul `#0b2f7a`, rojo `#c8102e` y blanco.
-- Textos con voseo ("descargá", "armá", "vos").
-
-## Deploy en Railway
-
-1. Subí los cambios a GitHub (`git push`).
-2. En [Railway](https://railway.com): **New Project → Deploy from GitHub repo** y elegí este repositorio.
-3. Railway detecta el `Dockerfile` y construye la imagen con él. El puerto se toma de la variable `PORT` que Railway asigna automáticamente.
-4. En **Settings → Networking → Generate Domain** generás la URL pública, o conectás un dominio propio.
-
-Cada `push` a la rama principal vuelve a desplegar el sitio automáticamente.
-
-## Redes
-
-Instagram: [@mi_vueltica](https://www.instagram.com/mi_vueltica/)
+- [`CLAUDE.MD`](CLAUDE.MD): project conventions
+- Instagram: [@mi_vueltica](https://www.instagram.com/mi_vueltica/)
