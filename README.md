@@ -1,6 +1,6 @@
-# MiVueltica · Website
+# Mi VuelTica · Website
 
-Marketing website for MiVueltica: a catalog of free plans and activities all over Costa Rica that presents the app and links to the app stores.
+Marketing website for Mi VuelTica: a catalog of free plans and activities all over Costa Rica that presents the app and links to the app stores.
 
 | Repository | What it is |
 |---|---|
